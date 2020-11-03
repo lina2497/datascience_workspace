@@ -47,9 +47,10 @@ yum install python-sphinx
 
 
 #install r packages
+#installing sf in this way seems to fail, it works if you manually install in rstudio though.
 Rscript -e 'install.packages("pacman", repos="https://cloud.r-project.org")'
 Rscript -e 'pacman::p_load(
-  sf,
+  sf, 
   tidyverse,
   rgl,
   rJava,
@@ -122,3 +123,6 @@ Rscript -e 'pacman::p_load(
   brew,
   broomExtra
 )'
+
+# Update anaconda
+conda update --prefix /home/nca_datalab/anaconda3 anaconda
