@@ -126,3 +126,7 @@ Rscript -e 'pacman::p_load(
 
 # Update anaconda
 conda update --prefix /home/nca_datalab/anaconda3 anaconda
+
+#install rshiny server
+wget https://download2.rstudio.org/server/centos6/x86_64/rstudio-server-rhel-1.3.1093-x86_64.rpm
+sudo yum install rstudio-server-rhel-1.3.1093-x86_64.rpm
