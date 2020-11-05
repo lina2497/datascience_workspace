@@ -130,3 +130,15 @@ conda update --prefix /home/nca_datalab/anaconda3 anaconda
 #install rshiny server
 wget https://download2.rstudio.org/server/centos6/x86_64/rstudio-server-rhel-1.3.1093-x86_64.rpm
 sudo yum install rstudio-server-rhel-1.3.1093-x86_64.rpm
+
+#Install node
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+. ~/.nvm/nvm.sh
+nvm install node
+
+#Install VS code
+rpm --import https://packages.microsoft.com/keys/microsoft.asc
+sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
+yum check-update
+yum install code
+node -e "console.log('Running Node.js ' + process.version)"
