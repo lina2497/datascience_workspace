@@ -17,6 +17,7 @@ sh //datascience_workspace/community-2020.2.3/bin/pycharm.sh
 
 # Anaconda
 source //datascience_workspace/anaconda3/bin/activate 
+
 anaconda-navigatior
 
 # VS code
