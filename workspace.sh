@@ -1,3 +1,7 @@
+cd //
+sudo git clone https://github.com/lina2497/datascience_workspace
+cd datascience_workspace
+
 # install some basics
 yum -y update
 amazon-linux-extras install R4 python3.8 postgresql11 vim golang1.11 ruby2.6 
@@ -128,8 +132,8 @@ Rscript -e 'pacman::p_load(
 conda update --prefix /home/nca_datalab/anaconda3 anaconda
 
 #install rshiny server
-wget https://download2.rstudio.org/server/centos6/x86_64/rstudio-server-rhel-1.3.1093-x86_64.rpm
-sudo yum install rstudio-server-rhel-1.3.1093-x86_64.rpm
+wget https://download3.rstudio.org/centos6.3/x86_64/shiny-server-1.5.14.948-x86_64.rpm
+sudo yum install --nogpgcheck shiny-server-1.5.14.948-x86_64.rpm
 
 #Install node
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
