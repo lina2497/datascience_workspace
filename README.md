@@ -5,10 +5,14 @@ This is a shell script to configure an AWS workspace running amazon linux to ins
 The image should come preinstalled with R (4.0), Python (3.8) PostgreSQL (11), vim, golang 1.11 and ruby2.6 from the amazon linux repository.
 
 # R studio and shinyserver
-Amazon linux doesn't seem to support R studio desktop so we install R studio server instead. The user experience is identical except that R studio is accessed from a browser on the workspace e.g. firefox by navigating to "localhost:8787" then logging in. The username r_user is created as part of this script and you will be prompted to create a password, this enables you to login to r studio server. 
+Amazon linux doesn't seem to support R studio desktop so we install R studio server instead. The user experience is identical except that R studio is accessed from a browser on the workspace e.g. firefox by navigating to "localhost:8787" then logging in. 
 
-If you need to reset the password for r_user:
-sudo passwd r_user
+You will need to create a username for yourself by running some code in the terminal:
+
+sudo useradd new_user
+sudo passwd new_user
+
+This will create a username called new_user and allow you to set a password.
 
 Shiny server is also installed. It isn't exposed from here e.g. your shiny apps from the workspace will not be visible outside the workspace. But shiny server is useful for testing out shiny apps before deployment. You can find it at "localhost:3838". The directory for apps is //srv/shiny-server/.
 
