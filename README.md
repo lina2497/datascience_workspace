@@ -10,6 +10,7 @@ Amazon linux doesn't seem to support R studio desktop so we install R studio ser
 You will need to create a username for yourself by running some code in the terminal:
 
 sudo useradd new_user
+
 sudo passwd new_user
 
 This will create a username called new_user and allow you to set a password.
